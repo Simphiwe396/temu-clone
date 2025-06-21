@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games & Toys - 2ngTDE</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><i>2ngTDE</i></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <a href="#"><i class="far fa-user"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <section class="category-page">
+        <h1><i class="fas fa-gamepad"></i> Games & Toys</h1>
+        
+        <div class="subcategories">
+            <a href="games-video.html" class="subcategory-card">
+                <img src="/images/categories/videogames.jpg" alt="Video Games">
+                <h3>Video Games</h3>
+            </a>
+            <a href="games-board.html" class="subcategory-card">
+                <img src="/images/categories/boardgames.jpg" alt="Board Games">
+                <h3>Board Games</h3>
+            </a>
+            <a href="games-toys.html" class="subcategory-card">
+                <img src=/"images/categories/toys.jpg" alt="Toys">
+                <h3>Toys</h3>
+            </a>
+        </div>
+        
+        <div class="category-products" id="games-products">
+            <!-- Products loaded via JavaScript -->
+        </div>
+        
+        <div class="age-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Some products may have age restrictions. Please check product details before purchasing.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div class="links-column">
+                <h3>Customer Service</h3>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="shipping.html">Shipping</a>
+            </div>
+            <div class="links-column">
+                <h3>About 2ngTDE</h3>
+                <a href="about.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/products.js"></script>
+    <script src="/src/js/cart.js"></script
+    <script src="/src/js/category.js"></script>
+</body>
+</html>

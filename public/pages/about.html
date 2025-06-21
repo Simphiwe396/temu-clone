@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - 2ngTDE</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">2ngTDE</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <a href="#"><i class="far fa-user"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <section class="about-page">
+        <h1>Our Story</h1>
+        
+        <div class="about-hero">
+            <div class="hero-text">
+                <h2>Redefining Online Shopping in South Africa</h2>
+                <p>Founded in 2020, 2ngTDE has grown from a small startup to one of the fastest growing e-commerce platforms in the region.</p>
+            </div>
+            <img src="/images/about/team.jpg" alt="2ngTDE Team">
+        </div>
+        
+        <div class="mission-section">
+            <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+            <p>To provide affordable, high-quality products with exceptional customer service, making online shopping accessible to everyone.</p>
+        </div>
+        
+        <div class="values-section">
+            <h2><i class="fas fa-heart"></i> Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Customer First</h3>
+                    <p>We prioritize customer satisfaction above all else</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Constantly improving our platform and services</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Local Impact</h3>
+                    <p>Supporting local businesses and communities</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-preview">
+            <h2><i class="fas fa-users"></i> Meet the Leadership</h2>
+            <p>Our dedicated team drives the success of 2ngTDE</p>
+            <a href="about.html" class="btn" id="view-team-btn">View Full Team</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div class="links-column">
+                <h3>Customer Service</h3>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="shipping.html">Shipping</a>
+            </div>
+            <div class="links-column">
+                <h3>About 2ngTDE</h3>
+                <a href="about.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to admin panel
+        document.getElementById('view-team-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.admin-access-btn').click();
+        });
+    </script>
+
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/products.js"></script>
+    <script src="/src/js/cart.js"></script
+
+</body>
+</html>

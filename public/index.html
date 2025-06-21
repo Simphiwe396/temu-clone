@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2ngTDE - Premium Clothing Marketplace</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Top Notification Bar -->
+    <div class="notification-bar">
+        <span>🔥 New users get extra 30% OFF first order! | 🚀 Free shipping on orders $10+</span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">2ngTDE</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <a href="#"><i class="far fa-user"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Mega Discount Banner -->
+    <section class="mega-discount">
+        <div class="discount-tag">90% OFF</div>
+        <div class="countdown">
+            <span>Ends in: </span>
+            <div class="timer">
+                <span id="hours">12</span>h 
+                <span id="minutes">45</span>m 
+                <span id="seconds">30</span>s
+            </div>
+        </div>
+        <button class="shop-now-btn">SHOP NOW</button>
+    </section>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+       <a href="index.html" class="category active"><i class="fas fa-home"></i> Home</a>
+       <a href="clothing.html" class="category"><i class="fas fa-tshirt"></i> Clothing</a>
+       <a href="electronics.html" class="category"><i class="fas fa-mobile-alt"></i> Electronics</a>
+       <a href="home.html" class="category"><i class="fas fa-home"></i> Home</a>
+       <a href="games.html" class="category"><i class="fas fa-gamepad"></i> Games</a>
+    </nav>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale">
+        <div class="section-header">
+            <h2>FLASH SALE</h2>
+            <div class="sale-countdown">
+                <span>Ends in: </span>
+                <span class="time">12:45:30</span>
+            </div>
+        </div>
+        <div class="product-grid" id="flash-sale-products">
+            <!-- Products loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Price Drop Notifications -->
+    <div class="price-drop-notifications">
+        <div class="notification">
+            <span class="user">User_482</span> just bought <span class="product">Wireless Earbuds</span> for 
+            <span class="new-price">$3.99</span> (was <span class="old-price">$12.99</span>)
+            <span class="time">2 mins ago</span>
+        </div>
+    </div>
+
+    <!-- Free Gifts Section -->
+    <section class="free-gifts">
+        <h2>LIMITED FREE GIFTS <span class="hot-tag">HOT</span></h2>
+        <div class="gifts-container">
+            <div class="gift-card">
+                <div class="free-badge">FREE</div>
+                <img src="/images/products/gift1.jpg" alt="Free Gift">
+                <p>With orders over $10</p>
+                <button>CLAIM NOW</button>
+            </div>
+            <div class="gift-card">
+                <div class="free-badge">FREE</div>
+                <img src="/images/products/gift2.jpg" alt="Free Gift">
+                <p>With orders over $20</p>
+                <button>CLAIM NOW</button>
+            </div>
+            <div class="gift-card">
+                <div class="free-badge">FREE</div>
+                <img src="/images/products/gift3.jpg" alt="Free Gift">
+                <p>With orders over $30</p>
+                <button>CLAIM NOW</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spin the Wheel -->
+    <section class="spin-wheel">
+        <h2>SPIN TO WIN COUPONS</h2>
+        <div class="wheel-container">
+            <div class="wheel" id="wheel">
+                <div class="option" style="--i:0">$5 OFF</div>
+                <div class="option" style="--i:1">10% OFF</div>
+                <div class="option" style="--i:2">$3 OFF</div>
+                <div class="option" style="--i:3">FREE SHIP</div>
+                <div class="option" style="--i:4">$1 OFF</div>
+                <div class="option" style="--i:5">20% OFF</div>
+            </div>
+            <button class="spin-btn" id="spin-btn">SPIN</button>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="reviews-container">
+            <!-- Reviews loaded via JavaScript -->
+        </div>
+        
+        <div class="add-review">
+            <h3>Leave Your Review</h3>
+            <form id="review-form">
+                <input type="text" placeholder="Your Name" required>
+                <textarea placeholder="Your Review" required></textarea>
+                <div class="rating-input">
+                    <span>Rating:</span>
+                    <div class="stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <div class="links-column">
+                <h3>Customer Service</h3>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="shipping.html">Shipping</a>
+            </div>
+            <div class="links-column">
+                <h3>About 2ngTDE</h3>
+                <a href="about.html">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="links-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2023 2ngTDE. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Hidden Admin Access Button -->
+    <div class="admin-access-btn">
+        <i class="fas fa-user-shield"></i>
+    </div>
+
+    <!-- Admin Panel (Hidden by Default) -->
+    <div class="admin-panel">
+        <div class="admin-header">
+            <h2>2ngTDE Admin Portal</h2>
+            <div class="close-admin"><i class="fas fa-times"></i></div>
+        </div>
+        
+        <div class="team-grid">
+            <!-- Team members loaded via JavaScript -->
+        </div>
+        
+        <div class="admin-stats">
+            <div class="stat-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Total Orders</h3>
+                <p id="total-orders">0</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3>Active Users</h3>
+                <p id="active-users">0</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Revenue</h3>
+                <p id="revenue">R0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Member Modal -->
+    <div class="team-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="member-details">
+                <!-- Content loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/products.js"></script>
+    <script src="/src/js/cart.js"></script>
+    <script src="/src/js/admin.js"></script>
+    
+    <!-- VanillaTilt for product cards (non-mobile only) -->
+    <script>
+    if (window.innerWidth > 768) {
+        document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"><\/script>');
+    }
+    </script>
+</body>
+</html>

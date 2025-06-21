@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - 2ngTDE</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">2ngTDE</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <a href="#"><i class="far fa-user"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <section class="faq-page">
+        <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
+        
+        <div class="faq-categories">
+            <button class="faq-tab active" data-category="general">General</button>
+            <button class="faq-tab" data-category="orders">Orders</button>
+            <button class="faq-tab" data-category="payments">Payments</button>
+            <button class="faq-tab" data-category="returns">Returns</button>
+        </div>
+        
+        <div class="faq-container" id="general-faqs">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I create an account?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Click on the 'Account' icon in the top right corner and select 'Register'. You'll need to provide your email address and create a password.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are your business hours?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our customer service team is available Monday to Friday from 8am to 5pm, and Saturdays from 9am to 1pm.</p>
+                </div>
+            </div>
+            
+            <!-- Add more FAQ items -->
+        </div>
+        
+        <div class="contact-prompt">
+            <h2>Still have questions?</h2>
+            <p>Our customer service team is happy to help with any inquiries.</p>
+            <a href="contact-us.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div class="links-column">
+                <h3>Customer Service</h3>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="shipping.html">Shipping</a>
+            </div>
+            <div class="links-column">
+                <h3>About 2ngTDE</h3>
+                <a href="about.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                question.querySelector('i').classList.toggle('fa-chevron-up');
+                question.querySelector('i').classList.toggle('fa-chevron-down');
+            });
+        });
+    </script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/products.js"></script>
+    <script src="/src/js/cart.js"></script
+</body>
+</html>
