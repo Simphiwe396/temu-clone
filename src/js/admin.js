@@ -1,37 +1,89 @@
-// admin.js - Updated with null checks
+// admin.js - Complete Admin Panel Functionality
 
+// Team Data
 const teamMembers = [
-    // ... (keep your existing team member data) ...
+    {
+        id: 1,
+        name: "Simphiwe Kubheka",
+        position: "Founder and Director",
+        image: "/images/team/Simphiwe.jpg",
+        bio: "Visionary leader with 15+ years of experience in e-commerce and business strategy."
+    },
+    {
+        id: 2,
+        name: "Nqobile Kubheka",
+        position: "Director",
+        image: "/images/team/nqobile.jpg",
+        bio: "Operations expert specializing in logistics and customer experience."
+    },
+    {
+        id: 3,
+        name: "Themba Kubheka",
+        position: "Director",
+        image: "/images/team/themba.jpg",
+        bio: "Technology innovator responsible for platform development."
+    },
+    {
+        id: 4,
+        name: "Dudu Kubheka",
+        position: "CEO",
+        image: "/images/team/dudu.jpg",
+        bio: "Seasoned executive with a track record of scaling businesses."
+    },
+    {
+        id: 5,
+        name: "Lindiwe Tshabalala",
+        position: "Manager",
+        image: "/images/team/lindiwe.jpg",
+        bio: "Customer service specialist managing our support team."
+    },
+    {
+        id: 6,
+        name: "Silindile Kubheka",
+        position: "Assistant Manager",
+        image: "/images/team/silindile.jpg",
+        bio: "Marketing and communications expert."
+    }
 ];
 
+// Initialize Admin Panel
 document.addEventListener('DOMContentLoaded', () => {
-    // Safely get elements
-    const adminBtn = document.querySelector('.admin-btn');
+    // Get all admin triggers
+    const adminTriggers = [
+        document.querySelector('.admin-btn'), // Nav button
+        document.querySelector('.admin-access-btn') // Floating button
+    ];
+    
     const adminModal = document.getElementById('adminModal');
     const closeModal = document.querySelector('.close-modal');
 
-    // Only setup if elements exist
-    if (adminBtn && adminModal && closeModal) {
-        adminBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            adminModal.style.display = 'block';
-            renderTeamGrid();
-            animateStats();
-        });
+    // Add click handlers to all triggers
+    adminTriggers.forEach(trigger => {
+        if (trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                adminModal.style.display = 'block';
+                renderTeamGrid();
+                animateStats();
+            });
+        }
+    });
 
+    // Close modal when X is clicked
+    if (closeModal) {
         closeModal.addEventListener('click', () => {
             adminModal.style.display = 'none';
         });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === adminModal) {
-                adminModal.style.display = 'none';
-            }
-        });
-    } else {
-        console.error('Admin elements not found - check your HTML');
     }
 
+    // Close when clicking outside modal
+    window.addEventListener('click', (e) => {
+        if (e.target === adminModal) {
+            adminModal.style.display = 'none';
+        }
+    });
+
+    // Render team grid
     function renderTeamGrid() {
         const grid = document.querySelector('.team-grid');
         if (!grid) return;
@@ -47,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     }
 
+    // Animate statistics
     function animateStats() {
         const statsElements = {
             orders: document.getElementById('total-orders'),
